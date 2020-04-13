@@ -1,0 +1,7 @@
+baseURL = "https://rustcakes-com.netlify.com/"
+languageCode = "en-us"
+title = "růstcakes"
+canonifyURLs = true
+
+[Params]
+description = "Dessert Shop b e r l i n 𝔟𝔬𝔩𝔡, 𝔢𝔡𝔤𝔶, 𝔰𝔴𝔢𝔢𝔱, 𝔫𝔞𝔱𝔲𝔯𝔞𝔩"
