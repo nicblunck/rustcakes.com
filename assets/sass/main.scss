@@ -45,11 +45,12 @@ p {
 }
 
 header {
-  padding-top: 4em;
+  padding-top: 7em;
+  padding-bottom: 3em;
 
   a {
     display: block;
-    max-width: 500px;
+    max-width: 260px;
     margin: 0 auto;
 
     &:hover,
@@ -58,8 +59,7 @@ header {
     }
   }
 
-  img {
-    display: block;
+  svg {
     width: 100%;
   }
 }
