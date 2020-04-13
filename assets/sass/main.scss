@@ -30,7 +30,7 @@ a {
   text-decoration: none;
 
   &.active {
-    text-decoration: line-through;
+    // text-decoration: line-through;
   }
   &:hover,
   &:focus {
@@ -84,7 +84,7 @@ nav {
     &::after {
       flex-grow: 1;
       text-align: center;
-      content: '\2E38';
+      // content: '\2E38';
     }
 
     &:last-child {
