@@ -1,5 +1,5 @@
 $font-size-base: 13;
-$font-size-heading: 13;
+$font-size-heading: 18;
 $font-size-base-mobile: 11;
 $font-size-heading-mobile: 13;
 $line-height: 1.6;
@@ -68,7 +68,7 @@ nav {
   max-width: 26em;
   margin: 1em auto;
   margin-bottom: 3em;
-  font-size: 20 / $font-size-base * 100%;
+  font-size: $font-size-heading / $font-size-base * 100%;
   font-family: 'Libre Baskerville', serif;
   letter-spacing: 0.1em;
 
@@ -119,6 +119,12 @@ footer {
 @media screen and (max-width: 767px) {
   body {
     font-size: $font-size-base-mobile / 12 * 100%;
+  }
+
+  header {
+    a {
+      max-width: 230px;
+    }
   }
 
   nav {
