@@ -19,7 +19,7 @@ $color-foreground: #f0f0f0;
 }
 
 body {
-  margin: 1em;
+  margin: 1em 0.5em;
   font-family: $font-family-base;
   font-size: $font-size-base / 12 * 100%;
   line-height: $line-height;
@@ -76,14 +76,13 @@ header {
 }
 
 nav {
-  max-width: 26em;
+  max-width: 28em;
   margin: 1em auto;
   margin-bottom: 3em;
 
   ul {
     display: flex;
     justify-content: space-between;
-    padding-right: 0.5em;
   }
 
   li {
@@ -102,7 +101,7 @@ nav {
 main {
   max-width: 24em;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 2em;
 
   p {
     text-indent: 3em;
