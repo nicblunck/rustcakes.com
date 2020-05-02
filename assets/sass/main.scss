@@ -69,7 +69,8 @@ nav {
   margin: 1em auto;
   margin-bottom: 3em;
   font-size: $font-size-heading / $font-size-base * 100%;
-  font-family: 'Libre Baskerville', serif;
+  // font-family: 'Libre Baskerville', serif;
+  text-transform: uppercase;
   letter-spacing: 0.1em;
 
   ul {
