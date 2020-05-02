@@ -1,11 +1,10 @@
 $font-family-base: 'News Cycle', sans-serif;
 $font-family-heading: 'chomskyregular', serif;
-// $font-family-heading: 'proclamate_lightlight', serif;
 
 $font-size-base: 13;
-$font-size-heading: 15;
+$font-size-heading: 16;
 $font-size-base-mobile: 11;
-$font-size-heading-mobile: 13;
+$font-size-heading-mobile: 14;
 $line-height: 1.6;
 
 $color-background: #000;
@@ -15,13 +14,6 @@ $color-foreground: #f0f0f0;
   font-family: 'chomskyregular';
   src: url('../fonts/chomsky-webfont.woff2') format('woff2'),
     url('../fonts/chomsky-webfont.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-}
-
-@font-face {
-  font-family: 'proclamate_lightlight';
-  src: url('../fonts/proclamate_light-webfont.woff') format('woff');
   font-weight: normal;
   font-style: normal;
 }
@@ -87,32 +79,22 @@ nav {
   max-width: 26em;
   margin: 1em auto;
   margin-bottom: 3em;
-  font-size: $font-size-heading / $font-size-base * 100%;
-  font-family: $font-family-heading;
-  // text-transform: uppercase;
-  // letter-spacing: 0.05em;
 
   ul {
     display: flex;
     justify-content: space-between;
+    padding-right: 0.5em;
   }
 
   li {
-    display: flex;
-    flex-grow: 1;
+    display: block;
+    text-transform: uppercase;
 
-    &::after {
-      flex-grow: 1;
-      text-align: center;
-      // content: '\2E38';
-    }
-
-    &:last-child {
-      flex-grow: 0;
-
-      &::after {
-        display: none;
-      }
+    &:first-child {
+      font-family: $font-family-heading;
+      font-size: $font-size-heading / $font-size-base * 100%;
+      text-transform: none;
+      margin-top: -0.08em;
     }
   }
 }
@@ -148,6 +130,10 @@ footer {
   }
 
   nav {
-    font-size: $font-size-heading-mobile / $font-size-base-mobile * 100%;
+    li {
+      &:first-child {
+        font-size: $font-size-heading-mobile / $font-size-base-mobile * 100%;
+      }
+    }
   }
 }
