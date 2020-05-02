@@ -1,5 +1,9 @@
+$font-family-base: 'News Cycle', sans-serif;
+$font-family-heading: 'chomskyregular', serif;
+// $font-family-heading: 'proclamate_lightlight', serif;
+
 $font-size-base: 13;
-$font-size-heading: 18;
+$font-size-heading: 15;
 $font-size-base-mobile: 11;
 $font-size-heading-mobile: 13;
 $line-height: 1.6;
@@ -7,9 +11,24 @@ $line-height: 1.6;
 $color-background: #000;
 $color-foreground: #f0f0f0;
 
+@font-face {
+  font-family: 'chomskyregular';
+  src: url('../fonts/chomsky-webfont.woff2') format('woff2'),
+    url('../fonts/chomsky-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'proclamate_lightlight';
+  src: url('../fonts/proclamate_light-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
+
 body {
   margin: 1em;
-  font-family: 'News Cycle', sans-serif;
+  font-family: $font-family-base;
   font-size: $font-size-base / 12 * 100%;
   line-height: $line-height;
   background: $color-background;
@@ -69,9 +88,9 @@ nav {
   margin: 1em auto;
   margin-bottom: 3em;
   font-size: $font-size-heading / $font-size-base * 100%;
-  // font-family: 'Libre Baskerville', serif;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
+  font-family: $font-family-heading;
+  // text-transform: uppercase;
+  // letter-spacing: 0.05em;
 
   ul {
     display: flex;

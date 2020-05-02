@@ -1,5 +1,5 @@
 ---
-title: růstcakes
+title: rustcakes
 menu:
   main:
     weight: 1
