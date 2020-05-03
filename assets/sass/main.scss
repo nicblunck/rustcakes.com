@@ -40,9 +40,6 @@ a {
   color: $color-foreground;
   text-decoration: none;
 
-  &.active {
-    // text-decoration: line-through;
-  }
   &:hover,
   &:focus {
     text-decoration: underline;
