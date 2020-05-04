@@ -1,0 +1,16 @@
+<p class="instafeed" id="js-instafeed"></p>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+<script type="text/javascript">
+  $.get('https://zapier.com/engine/rss/7443956/86270956', function (data) {
+    $(data).find('item').each(function () { // or "item" or whatever suits your feed
+      var el = $(this);
+      var title = el.find('title').text();
+      var link = el.find('link').text();
+      var image = el.find('enclosure').attr('url');
+      if (title && link && image) {
+        $('#js-instafeed').append('<a href="'+encodeURI(link)+'" target="_blank" title="'+title+'"><img src="'+encodeURI(image)+'" alt="'+title+'" /></a>');
+      }
+    });
+  });
+</script>
