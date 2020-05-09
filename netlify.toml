@@ -1,7 +1,9 @@
 [build]
+base = "/"
 publish = "public"
 command = "hugo --gc"
 
-[context.production.environment]
+[build.environment]
 HUGO_VERSION = "0.69.2"
 HUGO_ENV = "production"
+GIT_LFS_ENABLED = "true"
