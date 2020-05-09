@@ -1,0 +1,52 @@
+{{ define "main" }}
+
+<p>Fill in the form below. We will get back to you shortly.</p>
+<form
+  name="submitOrder"
+  action="/thanks"
+  netlify-honeypot="bot-field"
+  netlify
+  style="margin: 2em 0"
+>
+  <div class="form-group row">
+    <label for="staticName" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="staticName" value="email@example.com">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="staticEmail" class="col-sm-2 col-form-label">Email</label>
+    <div class="col-sm-10">
+      <input type="text" class="form-control" id="staticEmail" value="email@example.com">
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+      <label class="form-check-label" for="defaultCheck1">
+        Default checkbox
+      </label>
+    </div>
+  </div>
+  <div class="form-group">
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+      <label class="form-check-label" for="exampleRadios1">
+        Default radio
+      </label>
+    </div>
+    <div class="form-check">
+      <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+      <label class="form-check-label" for="exampleRadios2">
+        Second default radio
+      </label>
+    </div>
+  </div>
+  <div>
+    <button type="submit">Send</button>
+  </div>
+</form>
+
+{{- .Content -}}
+
+{{ end }}

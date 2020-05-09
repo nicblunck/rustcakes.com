@@ -146,3 +146,42 @@ footer {
     }
   }
 }
+
+.form-group {
+  margin-bottom: 1em;
+}
+label {
+  display: inline-block;
+  margin-bottom: 0.5em;
+  text-transform: lowercase;
+}
+.form-check {
+  position: relative;
+  padding-left: 1.25rem;
+}
+.form-check-label {
+  margin-bottom: 0;
+}
+.form-check-input {
+  position: absolute;
+  margin-top: 0.5em;
+  margin-left: -1.25rem;
+  padding: 0;
+}
+.form-control,
+button {
+  line-height: 1.5;
+  border: 1px solid $color-foreground;
+  color: $color-foreground;
+  background: $color-background;
+  padding: 0.5em;
+}
+.form-control {
+  display: block;
+  width: 100%;
+}
+button {
+  text-transform: uppercase;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+}
