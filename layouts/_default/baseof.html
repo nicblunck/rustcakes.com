@@ -1,24 +1,45 @@
 <!DOCTYPE html>
 <html lang="{{ .Site.Language.Lang }}">
   <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <title>{{ if .Params.Title }}{{ htmlUnescape .Params.Title }}{{ else }}{{ .Params.Title }}{{ end }}</title>
-    <meta name="viewport" content="width=device-width,minimum-scale=1">
-    <meta name="robots" content="noindex">
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <title>
+      {{- if .Params.Title -}}
+      {{ htmlUnescape .Params.Title }}
+      {{- else -}}
+      {{ .Params.Title }}
+      {{- end -}}
+    </title>
+    <meta name="viewport" content="width=device-width,minimum-scale=1" />
+    <meta name="robots" content="noindex" />
 
-    <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=News+Cycle&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Libre+Baskerville&family=News+Cycle&display=swap"
+      rel="stylesheet"
+    />
     {{ $style_main := resources.Get "sass/main.scss" | resources.ToCSS -}}
     {{ $bundle_styles := $style_main | resources.Minify | resources.Fingerprint -}}
-    <link rel="stylesheet" href="{{ $bundle_styles.Permalink }}">
+    <link rel="stylesheet" href="{{ $bundle_styles.Permalink }}" />
 
-    <meta property="og:title" content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}">
-    <meta name="description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:description" content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}">
-    <meta property="og:url" content="{{ .Permalink }}">
-    <meta property="og:site_name" content="{{ .Site.Title }}">
-    <meta property="og:image" content="{{ .Site.BaseURL }}{{ .Site.Params.images.index }}">
-    <meta name="twitter:card" content="summary_large_image">
+    <meta
+      property="og:title"
+      content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}"
+    />
+    <meta
+      name="description"
+      content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+    />
+    <meta
+      property="og:description"
+      content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}"
+    />
+    <meta property="og:url" content="{{ .Permalink }}" />
+    <meta property="og:site_name" content="{{ .Site.Title }}" />
+    <meta
+      property="og:image"
+      content="{{ .Site.BaseURL }}{{ .Site.Params.images.index }}"
+    />
+    <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
     <div class="container">
@@ -30,25 +51,25 @@
       </header>
       <nav>
         <ul>
-          {{ $currentPage := . -}}
-          {{ range .Site.Menus.main -}}
+          {{ $currentPage := . -}} {{ range .Site.Menus.main -}}
           <li>
             <a
               class="{{ if $currentPage.IsMenuCurrent "main" . }}active{{ end }}"
               href="{{ .URL }}"
-            >{{ .Name }}</a>
+              >{{ .Name }}</a
+            >
           </li>
           {{ end -}}
         </ul>
       </nav>
       <main>
-        {{ block "main" . }}
-        {{- .Content -}}
-        {{ end }}
+        {{ block "main" . }} {{- .Content -}} {{ end }}
       </main>
       <footer>
         <p>
-          <a href="{{ .Site.Params.instagram }}">{{ partial "instagram.html" }}</a>
+          <a href="{{ .Site.Params.instagram }}"
+            >{{ partial "instagram.html" }}</a
+          >
         </p>
       </footer>
     </div>
