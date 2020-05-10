@@ -1,4 +1,4 @@
-baseURL = "https://rustcakes-com.netlify.com/"
+baseURL = "https://rustcakes-com.netlify.app/"
 languageCode = "en-us"
 title = "růstcakes"
 canonifyURLs = true
