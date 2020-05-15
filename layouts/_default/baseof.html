@@ -4,11 +4,8 @@
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
     <title>
-      {{- if .Params.Title -}}
-      {{ htmlUnescape .Params.Title }}
-      {{- else -}}
-      {{ .Params.Title }}
-      {{- end -}}
+      {{- if ne .Params.Title .Site.Title }}{{ .Site.Title }} {{ end -}}
+      {{- if .Params.Title }}{{ htmlUnescape .Params.Title }}{{ end -}}
     </title>
     <meta name="viewport" content="width=device-width,minimum-scale=1" />
     <meta name="robots" content="noindex" />
