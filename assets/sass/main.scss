@@ -114,11 +114,22 @@ main {
   display: flex;
   flex-wrap: wrap;
 
+  li {
+    display: block;
+    width: 33.3%;
+    padding: 5px;
+    box-sizing: border-box;
+  }
+
   a {
     display: block;
-    width: 33%;
+    width: 100%;
     background-size: cover;
     background-position: center;
+
+    &:nth-child(n + 3) {
+      margin-right: 0;
+    }
 
     &:after {
       content: '';
