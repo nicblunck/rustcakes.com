@@ -5,7 +5,7 @@ menu:
   main:
     weight: 1
 ---
-About me
+### About me
 
 Working in kitchens since 2007 means there's no place I know better. From
 assisting chefs to exploring my skills as a cook, I learned everything from
@@ -25,7 +25,7 @@ When I have time, I use the resources I have to bake for the less
 fortunate. When you choose to order a cake with me, you help me make that a
 possibility. So thank you very much for choosing to support my project.
 
-About baking
+### About baking
 
 With my style of plant-based baking, my cakes are not as sweet, but still full
 of flavour.

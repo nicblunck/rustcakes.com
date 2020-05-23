@@ -103,10 +103,16 @@ main {
 
   p {
     text-indent: 3em;
+  }
 
-    &:first-child {
-      text-indent: 0;
-    }
+  p:first-child,
+  h3 + p {
+    text-indent: 0;
+  }
+
+  h3 {
+    font-size: 100%;
+    text-transform: uppercase;
   }
 }
 
