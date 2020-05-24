@@ -14,8 +14,7 @@ finally reached that of a chef.
 
 I've experimented with plant-based alternatives in my recipes for five
 years. When I made the switch to baking, I realised how therapeutic I find it,
-which helps when I spend so much time working and developing my creative
-process.
+which helps when I spend so much time working and developing my process.
 
 Making unique cool shit is all I want to be doing, and one of the best things
 about being creative is sharing art. If you have a skill and want to trade, drop
