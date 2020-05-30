@@ -1,4 +1,57 @@
 {{ define "main" }}
-{{ partial "instafeed.html" }}
+
+<ul class="instafeed" id="js-instafeed">
+  {{ range (slice "B94bJCNJV-E" "B-aJIwZnOIk" "B8jvs8KoTlx" "Bxz9csbouWI") -}}
+  {{- $original := resources.Get ( printf "img/%s.jpg" . ) -}}
+  {{- $image := $original.Resize "540x" -}}
+  <li>
+    <a
+      href="https://www.instagram.com/p/{{ . }}/"
+      target="_blank"
+      rel="noreferrer noopener"
+      style="background-image: url('{{ $image.RelPermalink }}');"
+    ></a>
+  </li>
+  {{ end }}
+</ul>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.0/dist/jquery.min.js"></script>
+<script type="text/javascript">
+  $.get('https://zapier.com/engine/rss/7443956/86270956', function (data) {
+    var i = 0;
+    var lastLink = null;
+    $(data)
+      .find('item')
+      .each(function () {
+        var el = $(this);
+        var title = el.find('title').text();
+        var link = el.find('link').text();
+        var image = el.find('enclosure').attr('url');
+        if (
+          i < 5 &&
+          title &&
+          link &&
+          image &&
+          link !== lastLink &&
+          link !== 'https://www.instagram.com/p/B-hvkFvnAUG/' &&
+          link !== 'https://www.instagram.com/p/CAzbZufHXVt/'
+        ) {
+          $('#js-instafeed').append(
+            '<li><a href="' +
+              encodeURI(link) +
+              '" target="_blank" rel="noreferrer noopener" style="background-image: url(\'' +
+              encodeURI(image) +
+              '\')" alt="' +
+              title +
+              '" /></a></li>'
+          );
+          i += 1;
+          lastLink = link;
+        }
+      });
+  });
+</script>
+
 {{- .Content -}}
+
 {{ end }}

@@ -1,4 +1,6 @@
 ---
 title: thanks
 ---
-Thanks for your order!
+### Thank you for your order
+
+I will get back to you shortly.
