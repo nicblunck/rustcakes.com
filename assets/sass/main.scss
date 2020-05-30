@@ -113,6 +113,13 @@ main {
   h3 {
     font-size: 100%;
     text-transform: uppercase;
+    margin-top: $line-height * 1em;
+    margin-bottom: 0;
+    line-height: 1.8;
+
+    &:first-child {
+      margin-top: 0;
+    }
   }
 }
 
