@@ -1,7 +1,7 @@
 {{ define "main" }}
 
 <ul class="instafeed" id="js-instafeed">
-  {{ range (slice "B94bJCNJV-E" "B-aJIwZnOIk" "B8jvs8KoTlx" "Bxz9csbouWI") -}}
+  {{ range (slice "B94bJCNJV-E" "B-aJIwZnOIk" "B8jvs8KoTlx" "CAFw-Y4Hyed" "CAs5_3OHnD_" "Bxz9csbouWI") -}}
   {{- $original := resources.Get ( printf "img/%s.jpg" . ) -}}
   {{- $image := $original.Resize "540x" -}}
   <li>
@@ -20,6 +20,8 @@
   $.get('https://zapier.com/engine/rss/7443956/86270956', function (data) {
     var i = 0;
     var lastLink = null;
+    var maxItems = 6;
+    var endLink = 'https://www.instagram.com/p/CBQZRBQHkG_/';
     $(data)
       .find('item')
       .each(function () {
@@ -27,14 +29,15 @@
         var title = el.find('title').text();
         var link = el.find('link').text();
         var image = el.find('enclosure').attr('url');
+        if (link === endLink) {
+          i = maxItems;
+        }
         if (
-          i < 5 &&
+          i < maxItems &&
           title &&
           link &&
           image &&
-          link !== lastLink &&
-          link !== 'https://www.instagram.com/p/B-hvkFvnAUG/' &&
-          link !== 'https://www.instagram.com/p/CAzbZufHXVt/'
+          link !== lastLink
         ) {
           $('#js-instafeed').append(
             '<li><a href="' +
