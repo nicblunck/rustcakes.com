@@ -218,8 +218,8 @@ menu:
           />
           specific
         </label>
-        <label id="color-scheme-specific-label">
-          <span class="sr-only">specific color scheme</span>
+        <div id="color-scheme-specific-container">
+          <label for="color-scheme-specific-value" class="sr-only">specific color scheme</label>
           <input
             class="form-control"
             type="text"
@@ -228,17 +228,17 @@ menu:
             style="margin-left: -1.25rem; margin-top: 0.25rem;"
             placeholder="type here"
           />
-        </label>
+        </div>
         <script>
           (function () {
             var checkbox = document.getElementById('color-scheme-specific');
-            var label = document.getElementById('color-scheme-specific-label');
+            var container = document.getElementById('color-scheme-specific-container');
             var input = document.getElementById('color-scheme-specific-value');
             function toggle() {
               if (checkbox.checked) {
-                label.style.display = 'block';
+                container.style.display = 'block';
               } else {
-                label.style.display = 'none';
+                container.style.display = 'none';
                 input.value = '';
               }
             }
