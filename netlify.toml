@@ -4,6 +4,6 @@ publish = "public"
 command = "hugo"
 
 [build.environment]
-HUGO_VERSION = "0.71.0"
+HUGO_VERSION = "0.72.0"
 HUGO_ENV = "production"
 GIT_LFS_ENABLED = "true"
