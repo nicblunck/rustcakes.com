@@ -18,10 +18,7 @@
     {{ $bundle_styles := $style_main | resources.Minify | resources.Fingerprint -}}
     <link rel="stylesheet" href="{{ $bundle_styles.Permalink }}" />
 
-    <meta
-      property="og:title"
-      content="{{ with .Title }}{{ . }}{{ else }}{{ .Site.Title }}{{ end }}"
-    />
+    <meta property="og:title" content="{{ .Site.Title }}" />
     <meta
       name="description"
       content="{{ if .Params.summary }}{{ .Params.summary | plainify | truncate 160 }}{{ else }}{{ .Site.Params.description }}{{ end }}"
@@ -32,10 +29,8 @@
     />
     <meta property="og:url" content="{{ .Permalink }}" />
     <meta property="og:site_name" content="{{ .Site.Title }}" />
-    <meta
-      property="og:image"
-      content="{{ .Site.BaseURL }}{{ .Site.Params.images.index }}"
-    />
+    {{- $socialImage := resources.Get .Site.Params.socialImage }}
+    <meta property="og:image" content="{{ $socialImage.RelPermalink }}" />
     <meta name="twitter:card" content="summary_large_image" />
   </head>
   <body>
