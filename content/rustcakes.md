@@ -16,7 +16,7 @@ I've experimented with plant-based alternatives in my recipes for five
 years. When I made the switch to baking, I realised how therapeutic I find it,
 which helps when I spend so much time working and developing my process.
 
-Making unique cool shit is all I want to be doing, and one of the best things
+Making cool shit is all I want to be doing, and one of the best things
 about being creative is sharing art. If you have a skill and want to trade, drop
 me an email so we can talk.
 
@@ -30,7 +30,8 @@ With my style of plant-based baking, my cakes are not as sweet, but still full
 of flavour.
 
 All my sponge cakes are made with plant-based butter, so you still get the
-texture and taste of a moist and fluffy classic sponge. With the help of cream
+texture and taste of a moist and fluffy classic sponge. Instead of classic
+buttercream, I use white chocolate ganache. With the help of cream
 of your choice and fruit compotes, you can tailor each cake to include your
 favourite flavours. I have spent years combining flavours. If you aren't sure
 what will work, I can help you find the perfect match for you.
