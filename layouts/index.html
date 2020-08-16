@@ -1,58 +1,69 @@
 {{ define "main" }}
-
-<ul class="instafeed" id="js-instafeed">
-  {{ range (slice "B94bJCNJV-E" "B-aJIwZnOIk" "B8jvs8KoTlx" "CAFw-Y4Hyed" "CAs5_3OHnD_" "Bxz9csbouWI") -}}
-  {{- $original := resources.Get ( printf "img/%s.jpg" . ) -}}
-  {{- $image := $original.Resize "540x" -}}
-  <li>
-    <a
-      href="https://www.instagram.com/p/{{ . }}/"
-      target="_blank"
-      rel="noreferrer noopener"
-      style="background-image: url('{{ $image.RelPermalink }}');"
-    ></a>
-  </li>
-  {{ end }}
-</ul>
+<ul class="instafeed" id="js-instafeed"></ul>
 
 <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js"></script>
 <script type="text/javascript">
-  $.get('https://zapier.com/engine/rss/7443956/86270956', function (data) {
-    var i = 0;
-    var lastLink = null;
-    var maxItems = 6;
-    var endLink = 'https://www.instagram.com/p/CBQZRBQHkG_/';
-    $(data)
-      .find('item')
-      .each(function () {
-        var el = $(this);
-        var title = el.find('title').text();
-        var link = el.find('link').text();
-        var image = el.find('enclosure').attr('url');
-        if (link === endLink) {
-          i = maxItems;
+  (function () {
+    var rssUrl = 'https://zapier.com/engine/rss/7443956/86270956';
+    var containerEl = document.getElementById('js-instafeed');
+    var numItems = 12;
+    var items = [
+      { url: 'https://www.instagram.com/p/B94bJCNJV-E/' },
+      { url: 'https://www.instagram.com/p/B-aJIwZnOIk/' },
+      { url: 'https://www.instagram.com/p/B8jvs8KoTlx/' },
+      { url: 'https://www.instagram.com/p/CAFw-Y4Hyed/' },
+      { url: 'https://www.instagram.com/p/CAs5_3OHnD_/' },
+      { url: 'https://www.instagram.com/p/Bxz9csbouWI/' }
+    ];
+    var endUrl = 'https://www.instagram.com/p/B_2yhaVHOv5/';
+    $.get(rssUrl, function (data) {
+      var i = items.length;
+      var prevUrl = null;
+      $(data)
+        .find('item')
+        .each(function () {
+          var el = $(this);
+          var title = el.find('title').text();
+          var url = el.find('link').text();
+          if (url === endUrl) {
+            i = numItems;
+          }
+          if (i < numItems && url && url !== prevUrl) {
+            i += 1;
+            prevUrl = url;
+            items.push({ url: url, title: title });
+          }
+        });
+      var after = [
+        { url: 'https://www.instagram.com/p/CC6EtHsHSI_/' },
+        { url: 'https://www.instagram.com/p/CC0PUlSnD0Z/' },
+        { url: 'https://www.instagram.com/p/CCjQ9abHsTg/' },
+        { url: 'https://www.instagram.com/p/CCgjcnKneRP/' },
+        { url: 'https://www.instagram.com/p/CCL9w5SHiw0/' },
+        { url: 'https://www.instagram.com/p/CCEO-HZnANJ/' }
+      ];
+      var len = items.length;
+      for (var j = 0; j < numItems - len; j++) {
+        items.push(after[j]);
+      }
+      var url;
+      var linkEl;
+      var itemEl;
+      for (var k = 0; k < items.length; k++) {
+        linkEl = document.createElement('a');
+        linkEl.setAttribute('href', items[k].url);
+        linkEl.setAttribute('target', '_blank');
+        linkEl.setAttribute('rel', 'noreferrer noopener');
+        linkEl.style.backgroundImage = 'url("' + items[k].url + 'media/?size=m")';
+        if (items[k].title) {
+          linkEl.setAttribute('alt', items[k].title);
         }
-        if (
-          i < maxItems &&
-          title &&
-          link &&
-          image &&
-          link !== lastLink
-        ) {
-          $('#js-instafeed').append(
-            '<li><a href="' +
-              encodeURI(link) +
-              '" target="_blank" rel="noreferrer noopener" style="background-image: url(\'' +
-              encodeURI(image) +
-              '\')" alt="' +
-              title +
-              '" /></a></li>'
-          );
-          i += 1;
-          lastLink = link;
-        }
-      });
-  });
+        itemEl = document.createElement('li');
+        itemEl.appendChild(linkEl);
+        containerEl.appendChild(itemEl);
+      }
+    });
+  })();
 </script>
 
 {{- .Content -}}
