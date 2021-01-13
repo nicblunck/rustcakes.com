@@ -7,34 +7,24 @@ menu:
 ---
 ### About me
 
-Working in kitchens since 2007 means there's no place I know better. From
-assisting chefs to exploring my skills as a cook, I learned everything from
-watching, repeating, and perfecting. I was working in Prague when my skills
-finally reached that of a chef.
+Working in kitchens since 2007 means there’s no place I know better. I find my baking process to be therapeutic, and I'm grateful my work allows me to be creative.
 
-I've experimented with plant-based alternatives in my recipes for five
-years. When I made the switch to baking, I realised how therapeutic I find it,
-which helps when I spend so much time working and developing my process.
+My cakes are inspired mostly by nature and contemporary art. When it comes to cake design, the stranger and more bizarre the better. All I want to do is make cool shit.
 
-Making cool shit is all I want to be doing, and one of the best things
-about being creative is sharing art. If you have a skill and want to trade, drop
-me an email so we can talk.
+If you love to make cool shit too, I'm always up for a trade; whether it's tattoos, ceramics, or any other skill or service. If you're interested, please don't hesitate to contact me.
 
-When I have time, I use the resources I have to bake for the less
-fortunate. When you choose to order a cake with me, you help me make that a
-possibility. So thank you very much for choosing to support my project.
+When I have time, I use the resources I have to bake for charities. With every order, you help make that possible.
 
 ### About baking
 
-With my style of plant-based baking, my cakes are not as sweet, but still full
-of flavour.
+In general, my cakes are not too sweet, but still full of flavor. I also use white chocolate ganache buttercream, which is less sugary. All my cakes are made with plant-based butter, so you still get the texture and taste of a classic fluffy sponge.
 
-All my sponge cakes are made with plant-based butter, so you still get the
-texture and taste of a moist and fluffy classic sponge. Instead of classic
-buttercream, I use white chocolate ganache. With the help of cream
-of your choice and fruit compotes, you can tailor each cake to include your
-favourite flavours. I have spent years combining flavours. If you aren't sure
-what will work, I can help you find the perfect match for you.
+With a variety of options available, you can tailor each cake to include your favorite flavors. If you aren’t sure what will work, I can help you find the perfect match.
 
-All my cakes are made unique, so if you see a cake you like on my Instagram, we
-can talk about how we can adjust it to your style.
+If you see a cake you like on my Instagram, we can talk about how we can adjust it to your style, as all my cakes are unique.
+
+Thanks for taking a look at my work and I hope to hear from you soon.
+
+With love,
+
+—Hana
