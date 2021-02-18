@@ -7,9 +7,9 @@ menu:
 ---
 ### About me
 
-Working in kitchens since 2007 means there’s no place I know better. I find my baking process to be therapeutic, and I'm grateful my work allows me to be creative.
+Working in kitchens since 2007 means there’s no place I know better. To me the process of baking is therapeutic, and I'm grateful my work allows me to be creative.
 
-My cakes are inspired mostly by nature and contemporary art. When it comes to cake design, the stranger and more bizarre the better. All I want to do is make cool shit.
+My cakes are inspired mostly by nature and contemporary culture. When it comes to cake design, the stranger and more bizarre the better. All I want to do is ethical, responsible, and imaginative cake-making and to experiement with its visuality.
 
 If you love to make cool shit too, I'm always up for a trade; whether it's tattoos, ceramics, or any other skill or service. If you're interested, please don't hesitate to contact me.
 
